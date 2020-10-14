@@ -8,14 +8,18 @@
 from locator.locators import Login,Index
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.remote.webdriver import WebDriver
+import time
 class LoginPage(object):
 
-    def __init__(self,driver):
+    def __init__(self,driver:WebDriver):
         self.driver = driver
     def login(self,mobile_phone,pwd):
         # 输入登录账号
+        self.driver.find_element(*Login.login_mobile_locator).clear()
         self.driver.find_element(*Login.login_mobile_locator).send_keys(mobile_phone)
         # 输入登录密码
+        self.driver.find_element(*Login.login_pwd_locator).clear()
         self.driver.find_element(*Login.login_pwd_locator).send_keys(pwd)
         # 点击登录
         self.driver.find_element(*Login.login_button_locator).click()
@@ -25,5 +29,6 @@ class LoginPage(object):
         return page_error_ele_text
     def get_toast_error_info(self):
         WebDriverWait(self.driver,10,0.5).until(EC.visibility_of_element_located(Login.login_toast_error_locator))
+        time.sleep(0.5)
         toast_error_ele_text = self.driver.find_element(*Login.login_toast_error_locator).text
         return toast_error_ele_text

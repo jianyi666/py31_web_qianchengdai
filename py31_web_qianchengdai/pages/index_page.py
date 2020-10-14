@@ -17,3 +17,19 @@ class IndexPage(object):
             return False
         else:
             return True
+    def get_out(self):
+        """退出登录"""
+        try:
+            self.driver.find_element(*Index.index_get_out_locator).click()
+        except:
+            return False
+        else:
+            return True
+    def get_in(self):
+        """点击登陆"""
+        try:
+            self.driver.find_element(*Index.index_get_in_locator).click()
+        except:
+            return False
+        else:
+            return True

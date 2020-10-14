@@ -11,5 +11,4 @@ login_data=[
     {"title":"密码为空","phone":"18684720553","pwd":"","expected":"请输入密码" },
     {"title":"账号错误","phone":"18684720554","pwd":"python","expected":"此账号没有经过授权，请联系管理员!" },
     {"title":"密码错误","phone":"18684720553","pwd":"python1","expected":"帐号或密码错误!" },
-    {"title":"未授权账号登陆","phone":"15501190120","pwd":"python","expected":"此账号没有经过授权，请联系管理员!" },
 ]

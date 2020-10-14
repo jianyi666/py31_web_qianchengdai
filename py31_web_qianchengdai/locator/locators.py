@@ -15,3 +15,5 @@ class Login():
 
 class Index():
     index_my_account_locator = (By.XPATH,"//a[contains(text(),'我的帐户')]")
+    index_get_out_locator = (By.XPATH,"//span/a[text()='退出']")
+    index_get_in_locator = (By.XPATH,"//span/a[text()='登录']")
