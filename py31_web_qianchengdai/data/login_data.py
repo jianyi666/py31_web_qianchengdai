@@ -5,6 +5,7 @@
 #@File     :login_data.py
 #@Sotfware :PyCharm
 
+
 login_data=[
     {"title":"登陆成功","phone":"18684720553","pwd":"python","expected":"" },
     {"title":"账号为空","phone":"","pwd":"python","expected":"请输入手机号" },
