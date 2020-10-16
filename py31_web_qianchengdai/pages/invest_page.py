@@ -6,7 +6,7 @@
 #@Sotfware :PyCharm
 from pages.base_page import BasePage
 from locator.locators import Invest
-
+import time
 class InvestPage(BasePage):
 
     def input_invest_amount(self,amount):
@@ -22,6 +22,7 @@ class InvestPage(BasePage):
         点击投标按钮
         :return:
         """
+        time.sleep(1)
         self.click_ele(Invest.invest_button_invest,"点击投标按钮")
 
     def get_invest_button_text(self):
@@ -35,6 +36,7 @@ class InvestPage(BasePage):
         获取错误弹框文本
         :return:
         """
+        self.wait_ele_visibility(Invest.invest_error_box_text, "等待提示弹框内的文本可见")
         return self.get_ele_text(Invest.invest_error_box_text,"获取提示弹框内的文本信息")
 
     def get_invest_success_box_text(self):
@@ -42,6 +44,7 @@ class InvestPage(BasePage):
         获取投资成功，提示弹框信息
         :return:
         """
+        time.sleep(1)
         return self.get_ele_text(Invest.invesr_success_box_text,"获取投标成功提示框内的文本信息")
     def get_invest_input_balance(self):
         """
@@ -55,4 +58,12 @@ class InvestPage(BasePage):
         点击查看并激活
         :return:
         """
+        time.sleep(1)
         self.click_ele(Invest.invest_view_and_activate,"点击查看并激活")
+
+    def click_box_determine(self):
+        """
+        点击提示框中的确定
+        :return:
+        """
+        self.click_ele(Invest.invest_box_determine,"点击提示框中的确认")

@@ -34,7 +34,7 @@ class BasePage():
         :return:
         """
         try:
-            WebDriverWait(self.driver, 20, 0.5).until(EC.visibility_of_element_located(locator))
+            WebDriverWait(self.driver, 30, 0.5).until(EC.visibility_of_element_located(locator))
         except Exception as e:
             self.error_screenshot(locator_desc)
             log.error(f"等待元素-【{locator_desc}】-可见失败！")
