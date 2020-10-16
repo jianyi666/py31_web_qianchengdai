@@ -4,15 +4,14 @@
 #@微信      :411758135
 #@File     :index_page.py
 #@Sotfware :PyCharm
-from selenium.webdriver.common.by import By
 from locator.locators import Index
-class IndexPage(object):
-    def __init__(self,driver):
-        self.driver = driver
+from pages.base_page import BasePage
+class IndexPage(BasePage):
+
     def get_my_account_ele(self):
         """获取我的账号ele"""
         try:
-            self.driver.find_element(*Index.index_my_account_locator)
+            self.find_ele(Index.index_my_account_locator,"登陆成功！我的账号")
         except:
             return False
         else:
@@ -20,7 +19,7 @@ class IndexPage(object):
     def get_out(self):
         """退出登录"""
         try:
-            self.driver.find_element(*Index.index_get_out_locator).click()
+            self.click_ele(Index.index_get_out_locator,"退出登录")
         except:
             return False
         else:
@@ -28,8 +27,12 @@ class IndexPage(object):
     def get_in(self):
         """点击登陆"""
         try:
-            self.driver.find_element(*Index.index_get_in_locator).click()
+            self.click_ele(Index.index_get_in_locator,"点击登陆")
         except:
             return False
         else:
             return True
+
+    def rush_to_did(self):
+        """抢投标"""
+        self.click_ele(Index.index_rush_to_bid,"点击抢投标按钮")

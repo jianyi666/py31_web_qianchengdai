@@ -6,29 +6,23 @@
 #@Sotfware :PyCharm
 
 from locator.locators import Login,Index
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.remote.webdriver import WebDriver
+from pages.base_page import BasePage
 import time
-class LoginPage(object):
+class LoginPage(BasePage):
 
-    def __init__(self,driver:WebDriver):
-        self.driver = driver
     def login(self,mobile_phone,pwd):
         # 输入登录账号
-        self.driver.find_element(*Login.login_mobile_locator).clear()
-        self.driver.find_element(*Login.login_mobile_locator).send_keys(mobile_phone)
+        self.input_ele_sendkeys(Login.login_mobile_locator,mobile_phone,"账号输入框")
         # 输入登录密码
-        self.driver.find_element(*Login.login_pwd_locator).clear()
-        self.driver.find_element(*Login.login_pwd_locator).send_keys(pwd)
+        self.input_ele_sendkeys(Login.login_pwd_locator,pwd,"密码输入框")
         # 点击登录
-        self.driver.find_element(*Login.login_button_locator).click()
+        self.click_ele(Login.login_button_locator,"点击登陆")
 
     def get_page_error_info(self):
-        page_error_ele_text = self.driver.find_element(*Login.login_page_error_locator).text
-        return page_error_ele_text
+        self.wait_ele_visibility(Login.login_page_error_locator,"账号密码为空错误")
+        return  self.get_ele_text(Login.login_page_error_locator,"账号密码为空错误文本")
+
     def get_toast_error_info(self):
-        WebDriverWait(self.driver,10,0.5).until(EC.visibility_of_element_located(Login.login_toast_error_locator))
+        self.wait_ele_visibility(Login.login_toast_error_locator,"账号密码为空错误toast")
         time.sleep(0.5)
-        toast_error_ele_text = self.driver.find_element(*Login.login_toast_error_locator).text
-        return toast_error_ele_text
+        return self.get_ele_text(Login.login_toast_error_locator,"账号密码为空错误文本")

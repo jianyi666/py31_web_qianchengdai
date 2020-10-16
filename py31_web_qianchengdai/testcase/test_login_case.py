@@ -4,22 +4,13 @@
 #@微信      :411758135
 #@File     :test_login_case.py
 #@Sotfware :PyCharm
-from unittestreport import ddt,list_data
 from selenium.webdriver import Chrome
 from pages.login_page import LoginPage
 from pages.index_page import IndexPage
 from data.login_data import login_data
 import pytest
 
-@pytest.fixture(scope='class',autouse=True)
-def Login_SetUp():
-    driver = Chrome()
-    driver.implicitly_wait(30)
-    driver.get("http://120.78.128.25:8765/Index/login.html")
-    login_page = LoginPage(driver)
-    index_page = IndexPage(driver)
-    yield login_page,index_page
-    driver.quit()
+
 
 @pytest.mark.parametrize("cases",login_data)
 class Test_Login():
