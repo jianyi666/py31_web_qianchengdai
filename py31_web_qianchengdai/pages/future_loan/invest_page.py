@@ -5,7 +5,7 @@
 #@File     :invest_page.py
 #@Sotfware :PyCharm
 from common.base_page import BasePage
-from locator.locators import Invest
+from locator.future_loan.locators import Invest
 import time
 class InvestPage(BasePage):
 

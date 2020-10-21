@@ -5,7 +5,7 @@
 #@File     :login_page.py
 #@Sotfware :PyCharm
 
-from locator.locators import Login
+from locator.future_loan.locators import Login
 from common.base_page import BasePage
 import time
 class LoginPage(BasePage):

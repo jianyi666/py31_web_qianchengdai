@@ -5,8 +5,8 @@
 #@File     :test_invest_case.py
 #@Sotfware :PyCharm
 import pytest
-from data.invest_data import invest_success_data,invest_error_info_data,invest_error_windows_data
-import time
+from data.future_loan.invest_data import invest_success_data,invest_error_info_data,invest_error_windows_data
+
 
 class Test_Invest():
 

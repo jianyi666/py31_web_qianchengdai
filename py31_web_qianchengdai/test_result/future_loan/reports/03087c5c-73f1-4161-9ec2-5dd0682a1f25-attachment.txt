@@ -1,0 +1,7 @@
+INFO     jianyi:base_page.py:162 查找元素-【获取投资输入框的内余额】-的【data-amount】属性成功！
+INFO     jianyi:base_page.py:127 向元素-【投资金额输入框】-发送内容成功！
+INFO     jianyi:base_page.py:109 点击元素-【点击投标按钮】-成功！
+INFO     jianyi:base_page.py:143 获取元素-【获取投标成功提示框内的文本信息】-文本内容成功！
+INFO     jianyi:base_page.py:109 点击元素-【点击查看并激活】-成功！
+INFO     jianyi:base_page.py:75 等待元素-【等待跳转到user页面】-被加载成功！
+INFO     jianyi:base_page.py:143 获取元素-【获取用户可用余额】-文本内容成功！

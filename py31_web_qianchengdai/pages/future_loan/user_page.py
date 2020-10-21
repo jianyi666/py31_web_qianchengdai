@@ -1,6 +1,6 @@
 
 from common.base_page import BasePage
-from locator.locators import User
+from locator.future_loan.locators import User
 class Userpage(BasePage):
 
     def get_user_available_balance(self):

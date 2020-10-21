@@ -1,9 +1,9 @@
 import pytest
 from selenium.webdriver import Chrome
-from pages.login_page import LoginPage
-from pages.index_page import IndexPage
-from pages.invest_page import InvestPage
-from pages.user_page import Userpage
+from pages.future_loan.login_page import LoginPage
+from pages.future_loan.index_page import IndexPage
+from pages.future_loan.invest_page import InvestPage
+from pages.future_loan.user_page import Userpage
 
 @pytest.fixture(scope='class')
 def Login_SetUp():

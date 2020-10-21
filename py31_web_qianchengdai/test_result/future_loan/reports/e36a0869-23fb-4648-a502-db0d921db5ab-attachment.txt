@@ -1,0 +1,5 @@
+INFO     jianyi:base_page.py:127 向元素-【账号输入框】-发送内容成功！
+INFO     jianyi:base_page.py:127 向元素-【密码输入框】-发送内容成功！
+INFO     jianyi:base_page.py:109 点击元素-【点击登陆】-成功！
+INFO     jianyi:base_page.py:43 等待元素-【账号密码为空错误toast】-可见成功！
+INFO     jianyi:base_page.py:143 获取元素-【账号密码为空错误文本】-文本内容成功！

@@ -1,0 +1,2 @@
+INFO     jianyi:base_page.py:127 向元素-【投资金额输入框】-发送内容成功！
+INFO     jianyi:base_page.py:143 获取元素-【获取投标按钮上的提示文本】-文本内容成功！

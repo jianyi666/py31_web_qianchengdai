@@ -1,0 +1,5 @@
+INFO     jianyi:base_page.py:127 向元素-【投资金额输入框】-发送内容成功！
+INFO     jianyi:base_page.py:109 点击元素-【点击投标按钮】-成功！
+INFO     jianyi:base_page.py:43 等待元素-【等待提示弹框内的文本可见】-可见成功！
+INFO     jianyi:base_page.py:143 获取元素-【获取提示弹框内的文本信息】-文本内容成功！
+INFO     jianyi:base_page.py:109 点击元素-【点击提示框中的确认】-成功！

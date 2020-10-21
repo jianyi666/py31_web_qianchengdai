@@ -4,10 +4,7 @@
 #@微信      :411758135
 #@File     :test_login_case.py
 #@Sotfware :PyCharm
-from selenium.webdriver import Chrome
-from pages.login_page import LoginPage
-from pages.index_page import IndexPage
-from data.login_data import login_data
+from data.future_loan.login_data import login_data
 import pytest
 
 

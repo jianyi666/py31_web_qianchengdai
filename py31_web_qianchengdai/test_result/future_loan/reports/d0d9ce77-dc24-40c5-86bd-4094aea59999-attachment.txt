@@ -1,0 +1,11 @@
+ERROR    jianyi:base_page.py:124 向元素-【投资金额输入框】-发送内容失败！
+ERROR    jianyi:base_page.py:125 object of type 'float' has no len()
+Traceback (most recent call last):
+  File "D:\Users\Administrator\PycharmProjects\web_qianchengdai\py31_web_qianchengdai\pages\base_page.py", line 121, in input_ele_sendkeys
+    self.driver.find_element(*locator).send_keys(value)
+  File "D:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\remote\webelement.py", line 478, in send_keys
+    {'text': "".join(keys_to_typing(value)),
+  File "D:\Users\Administrator\AppData\Local\Programs\Python\Python37\lib\site-packages\selenium\webdriver\common\utils.py", line 150, in keys_to_typing
+    for i in range(len(val)):
+TypeError: object of type 'float' has no len()
+INFO     jianyi:base_page.py:143 获取元素-【获取投标按钮上的提示文本】-文本内容成功！

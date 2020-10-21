@@ -1,0 +1,6 @@
+INFO     jianyi:base_page.py:127 向元素-【账号输入框】-发送内容成功！
+INFO     jianyi:base_page.py:127 向元素-【密码输入框】-发送内容成功！
+INFO     jianyi:base_page.py:109 点击元素-【点击登陆】-成功！
+INFO     jianyi:base_page.py:92 查找元素-【登陆成功！我的账号】-成功！
+INFO     jianyi:base_page.py:109 点击元素-【退出登录】-成功！
+INFO     jianyi:base_page.py:109 点击元素-【点击登陆】-成功！

@@ -4,7 +4,7 @@
 #@微信      :411758135
 #@File     :index_page.py
 #@Sotfware :PyCharm
-from locator.locators import Index
+from locator.future_loan.locators import Index
 from common.base_page import BasePage
 import time
 class IndexPage(BasePage):
