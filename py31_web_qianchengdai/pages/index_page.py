@@ -6,6 +6,7 @@
 #@Sotfware :PyCharm
 from locator.locators import Index
 from pages.base_page import BasePage
+import time
 class IndexPage(BasePage):
 
     def get_my_account_ele(self):
@@ -35,4 +36,5 @@ class IndexPage(BasePage):
 
     def rush_to_did(self):
         """抢投标"""
+        time.sleep(0.5)
         self.click_ele(Index.index_rush_to_bid,"点击抢投标按钮")
