@@ -7,8 +7,6 @@
 from data.future_loan.login_data import login_data
 import pytest
 
-
-
 @pytest.mark.parametrize("cases",login_data)
 class Test_Login():
     def test_login(self,cases,Login_SetUp):

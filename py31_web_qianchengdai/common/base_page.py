@@ -9,7 +9,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import  expected_conditions as EC
 from selenium.webdriver import Chrome
 from common.handle_logs import log
-from common.handle_path import ERROR_IMAGES_DIR
+from common.handle_path import FUTURE_LOAN_ERROR_IMAGES_DIR
 import  time
 class BasePage():
 
@@ -23,7 +23,7 @@ class BasePage():
         :return:
         """
         data_desc = time.strftime("%y-%m-%d_%H_%M_%S")
-        filepath = ERROR_IMAGES_DIR +"\\"+ data_desc +'_'+filename+'.png'
+        filepath = FUTURE_LOAN_ERROR_IMAGES_DIR +"\\"+ data_desc +'_'+filename+'.png'
         self.driver.save_screenshot(filepath)
 
     def wait_ele_visibility(self,locator,locator_desc):

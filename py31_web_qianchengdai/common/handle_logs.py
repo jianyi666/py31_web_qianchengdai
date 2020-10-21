@@ -2,7 +2,7 @@
 import  logging
 import os
 from logging.handlers import TimedRotatingFileHandler
-from common.handle_path import LOGS_DIR
+from common.handle_path import FUTURE_LOAN_LOGS_DIR
 def crate_logs():
     # 创建日志收集器
     log = logging.getLogger("jianyi")
@@ -10,7 +10,7 @@ def crate_logs():
     log.setLevel("INFO")
 
     # 创建时间轮转的文件输出渠道
-    fh = TimedRotatingFileHandler(filename=os.path.join(LOGS_DIR,"logs.log"),
+    fh = TimedRotatingFileHandler(filename=os.path.join(FUTURE_LOAN_LOGS_DIR,"logs.log"),
                                   when='d',
                                   interval=7,
                                   backupCount=3,
