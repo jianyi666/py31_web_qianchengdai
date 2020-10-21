@@ -4,7 +4,7 @@
 #@微信      :411758135
 #@File     :invest_page.py
 #@Sotfware :PyCharm
-from pages.base_page import BasePage
+from common.base_page import BasePage
 from locator.locators import Invest
 import time
 class InvestPage(BasePage):

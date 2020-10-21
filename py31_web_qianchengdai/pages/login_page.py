@@ -5,8 +5,8 @@
 #@File     :login_page.py
 #@Sotfware :PyCharm
 
-from locator.locators import Login,Index
-from pages.base_page import BasePage
+from locator.locators import Login
+from common.base_page import BasePage
 import time
 class LoginPage(BasePage):
 

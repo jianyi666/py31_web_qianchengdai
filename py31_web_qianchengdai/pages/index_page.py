@@ -5,7 +5,7 @@
 #@File     :index_page.py
 #@Sotfware :PyCharm
 from locator.locators import Index
-from pages.base_page import BasePage
+from common.base_page import BasePage
 import time
 class IndexPage(BasePage):
 
