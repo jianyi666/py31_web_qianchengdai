@@ -6,22 +6,22 @@
 #@Sotfware :PyCharm
 from selenium.webdriver.common.by import By
 
-class ClassParty_Index():
-    Index_Login =(By.XPATH,"//div[@id='indextop']//a[@class='login']")
-    Index_Frame_Close = (By.XPATH,"//div[@id='layui-layer1']//a[@class='layui-layer-ico layui-layer-close layui-layer-close2']")
-    Index_Get_Into_Class=(By.XPATH,"//div[@class='jr-ktp']//span")
+class ClassParty_Login():
+    Login_Login =(By.XPATH,"//div[@id='indextop']//a[@class='login']")
+    Login_Frame_Close = (By.XPATH,"//div[@id='layui-layer1']//a[@class='layui-layer-ico layui-layer-close layui-layer-close2']")
+    Login_Get_Into_Class=(By.XPATH,"//div[@class='jr-ktp']//span")
 
-class ClassParty_Room():
-    Room_Join_Course = (By.XPATH,"//div[@class='ktcon1l fr']")
-    Room_Frame_Input_class_code=(By.XPATH,"//div[@class='chuangjiankccon']/input")
-    Room_Frame_Cancel=(By.XPATH,"//div[@class='chuangjiankcbot']//a[@class='btn btn-defalut']")
-    Room_Frame_Join=(By.XPATH,"//div[@class='chuangjiankcbot']//a[@class='btn disable']")
-    Room_Into_Class=(By.XPATH,"//dt[@class='bgclass1']//a[text()='python-web项目实战- 考核项目']")
-    Room_Class_More=(By.XPATH,"//dt[@class='bgclass1']//span[text()='更多']")
-    Room_Class_Quit=(By.XPATH,"//dt[@class='bgclass1']//a[text()='退课']")
-    Room_Frame_Login_PassWord=(By.XPATH,"//div[@class='deletekt']//input")
-    Room_Class_Frame_Quit=(By.XPATH,"//div[@class='deletekt']//a[text()='退课']")
-    Room_Class_Frame_Cancel=(By.XPATH,"//div[@class='deletekt']//a[text()='取消']")
+class ClassParty_Index():
+    Index_Join_Course = (By.XPATH,"//div[@class='ktcon1l fr']")
+    Index_Frame_Input_class_code=(By.XPATH,"//div[@class='chuangjiankccon']/input")
+    Index_Frame_Cancel=(By.XPATH,"//div[@class='chuangjiankcbot']//a[@class='btn btn-defalut']")
+    Index_Frame_Join=(By.XPATH,"//div[@class='chuangjiankcbot']//a[@class='btn disable']")
+    Index_Into_Class=(By.XPATH,"//dt[@class='bgclass1']//a[text()='python-web项目实战- 考核项目']")
+    Index_Class_More=(By.XPATH,"//dt[@class='bgclass1']//span[text()='更多']")
+    Index_Class_Quit=(By.XPATH,"//dt[@class='bgclass1']//a[text()='退课']")
+    Index_Frame_Login_PassWord=(By.XPATH,"//div[@class='deletekt']//input")
+    Index_Class_Frame_Quit=(By.XPATH,"//div[@class='deletekt']//a[text()='退课']")
+    Index_Class_Frame_Cancel=(By.XPATH,"//div[@class='deletekt']//a[text()='取消']")
 
 class ClassParty_Course():
     Course_task=(By.XPATH,"//div[@id='third-nav']/a[text()='作业']")
