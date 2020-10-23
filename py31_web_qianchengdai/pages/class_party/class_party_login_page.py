@@ -6,14 +6,14 @@
 #@Sotfware :PyCharm
 from common.base_page import BasePage
 from locator.class_party.class_party_locators import ClassParty_Login
-class ClassPartyIndexPage(BasePage):
+class ClassPartyLoginPage(BasePage):
 
     def Index_Click_Logoin(self):
         """
         点击登录
         :return:
         """
-        self.click_ele(ClassParty_Login.Login_Login,"点击Login页面登录")
+        self.click_ele(ClassParty_Login.Login_Login,"Login页面登录")
 
     def Index_Close_Frame(self):
 
@@ -21,4 +21,4 @@ class ClassPartyIndexPage(BasePage):
 
     def Index_Get_Into_Class(self):
 
-        self.click_ele(ClassParty_Login.Login_Get_Into_Class,"点击Login页面进入课堂")
+        self.click_ele(ClassParty_Login.Login_Get_Into_Class,"Login页面进入课堂")

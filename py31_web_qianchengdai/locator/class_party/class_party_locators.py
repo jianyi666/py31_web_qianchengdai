@@ -22,10 +22,14 @@ class ClassParty_Index():
     Index_Frame_Login_PassWord=(By.XPATH,"//div[@class='deletekt']//input")
     Index_Class_Frame_Quit=(By.XPATH,"//div[@class='deletekt']//a[text()='退课']")
     Index_Class_Frame_Cancel=(By.XPATH,"//div[@class='deletekt']//a[text()='取消']")
+    Index_Toast_PassWord_Error =(By.XPATH,"//div[@id='error-tip']/span")
+    Index_Toast_Join_And_Drop_Class_Success = (By.XPATH,"//div[@id='show-tip']/span")
 
 class ClassParty_Course():
-    Course_task=(By.XPATH,"//div[@id='third-nav']/a[text()='作业']")
+    Course_Task=(By.XPATH,"//div[@id='third-nav']/a[text()='作业']")
     Course_Upload_task=(By.XPATH,"//div[@class='announce-cont-box']//a[text()='上传作业']")
+    Course_Submitted_Button=(By.XPATH,"//div[@class='announce-cont clearfix']//a[text()='已提交']")
+    Course_Task_Name=(By.XPATH,"//div[@class='work-new-l fl']//a")
 
 
 class ClassParty_HomeWork():
@@ -38,6 +42,11 @@ class ClassParty_HomeWork():
     HomeWork_Confirm = (By.XPATH,"//div[@class='opt-btn fr']/a[text()='确定']")
     HomeWork_Cancel = (By.XPATH,"//div[@class='opt-btn fr']/a[text()='取消']")
     HomeWork_View_Task_Status=(By.XPATH,"//div[@class='status fr']/span")
+    HomeWork_Update_Submit_Button=(By.XPATH,"//div[@class='sc-tj fl']/a[@class='new-tj1']")
+    HomeWork_Update_Work_Frame_OK_Button=(By.XPATH,"//div[@id='update-pop']//a[text()='确定']")
+    HomeWork_Update_Work_Frame_Cancel_Button=(By.XPATH,"//div[@id='update-pop']//a[text()='取消']")
+    HomeWork_Delete_Work=(By.XPATH,"//div[@class='opt clearfix']//a[text()='删除']")
+
 
 class ClassParty_PrivateInformation():
     PrivateInformation_Icon=(By.XPATH,"//div[@class='privateLetter']/a")

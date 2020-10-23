@@ -80,3 +80,20 @@ class ClassPartyIndexPage(BasePage):
         :return:
         """
         self.click_ele(ClassParty_Index.Index_Class_Frame_Cancel, "Index页面，点击退课弹框中的取消")
+
+    def Index_Get_PassWord_Error_Toast_Text(self):
+        """
+        获取退课时输入错误密码返回的Toast提示信息
+        :return:
+        """
+        return self.get_ele_text(ClassParty_Index.Index_Toast_PassWord_Error,"Index页面，获取退课时输入错误密码返回的Toast提示信息")
+
+    def Index_Get_Join_OR_Drop_Class_Toast_Text(self,Join_Or_Drop):
+        """
+        获取加入和退出课程成功时的Toast提示信息
+        :return:
+        """
+        return self.get_ele_text(ClassParty_Index.Index_Toast_Join_And_Drop_Class_Success,f"Index页面，获取{Join_Or_Drop}成功时的Toast提示信息")
+
+
+
