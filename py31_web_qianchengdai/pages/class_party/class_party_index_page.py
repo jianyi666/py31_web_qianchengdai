@@ -96,4 +96,3 @@ class ClassPartyIndexPage(BasePage):
         return self.get_ele_text(ClassParty_Index.Index_Toast_Join_And_Drop_Class_Success,f"Index页面，获取{Join_Or_Drop}成功时的Toast提示信息")
 
 
-
