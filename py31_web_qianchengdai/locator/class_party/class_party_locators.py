@@ -10,12 +10,19 @@ class ClassParty_Login():
     Login_Login =(By.XPATH,"//div[@id='indextop']//a[@class='login']")
     Login_Frame_Close = (By.XPATH,"//div[@id='layui-layer1']//a[@class='layui-layer-ico layui-layer-close layui-layer-close2']")
     Login_Get_Into_Class=(By.XPATH,"//div[@class='jr-ktp']//span")
+    Login_Input_Account=(By.XPATH,"//div[@class='padding-cont pt-login']//input[@name='account']")
+    Login_Input_PassWord=(By.XPATH,"//div[@class='padding-cont pt-login']//input[@name='pass']")
+    Login_Login_Button =(By.XPATH,"//div[@class='padding-cont pt-login']//a[text()='登录']")
+    Login_Error_Tips=(By.XPATH,"//div[@class='padding-cont pt-login']//p[@class='error-tips']")
+
 
 class ClassParty_Index():
+    Index_Join_Course_Error_Tips=(By.XPATH,"//div[@id='error-tip']/span")
+    Index_user =(By.XPATH,"//a[@id='user']")
     Index_Join_Course = (By.XPATH,"//div[@class='ktcon1l fr']")
     Index_Frame_Input_class_code=(By.XPATH,"//div[@class='chuangjiankccon']/input")
     Index_Frame_Cancel=(By.XPATH,"//div[@class='chuangjiankcbot']//a[@class='btn btn-defalut']")
-    Index_Frame_Join=(By.XPATH,"//div[@class='chuangjiankcbot']//a[@class='btn disable']")
+    Index_Frame_Join=(By.XPATH,"//div[@class='chuangjiankcbot']//a[@class='btn btn-positive']")
     Index_Into_Class=(By.XPATH,"//dt[@class='bgclass1']//a[text()='python-web项目实战- 考核项目']")
     Index_Class_More=(By.XPATH,"//dt[@class='bgclass1']//span[text()='更多']")
     Index_Class_Quit=(By.XPATH,"//dt[@class='bgclass1']//a[text()='退课']")
@@ -26,6 +33,7 @@ class ClassParty_Index():
     Index_Toast_Join_And_Drop_Class_Success = (By.XPATH,"//div[@id='show-tip']/span")
 
 class ClassParty_Course():
+    Course_Code=(By.XPATH,"(//div[@class='codetip'])[3]")
     Course_Task=(By.XPATH,"//div[@id='third-nav']/a[text()='作业']")
     Course_Upload_task=(By.XPATH,"//div[@class='announce-cont-box']//a[text()='上传作业']")
     Course_Submitted_Button=(By.XPATH,"//div[@class='announce-cont clearfix']//a[text()='已提交']")

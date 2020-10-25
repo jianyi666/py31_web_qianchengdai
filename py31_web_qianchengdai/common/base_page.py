@@ -90,6 +90,7 @@ class BasePage():
             raise e
         else:
             log.info(f"查找元素-【{locator_desc}】-成功！")
+            return True
 
     def click_ele(self,locator,locator_desc):
         """
