@@ -71,6 +71,19 @@ def ClassParty_Course_fixture():
     course_page.Course_Click_th_Task()
     homework_page = ClassPartyHomeWorkPage(driver)
     yield course_page,homework_page
+    # 点击返回Course页面
+    homework_page.HomeWork_Click_Back_Course()
+    # 点击返回Index页面
+    course_page.Course_Click_Back_Index()
+    # 点击课程中的更多
+    index_page.Index_Click_Class_More()
+    # 点击退课
+    index_page.Index_Click_Class_Quit()
+    # 输入密码
+    index_page.Index_Class_Frame_Input_PassWord(config.get("ClassParty_IndexPage","Password"))
+    # 点击退课
+    index_page.Index_Click_Class_Frame_Quit()
+    time.sleep(4)
     driver.quit()
 
 @pytest.fixture(scope='class')
