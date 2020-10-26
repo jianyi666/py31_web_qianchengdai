@@ -8,7 +8,7 @@ import pytest
 import time
 from data.class_party.class_party_login_data import Class_Party_Login_error,Class_Party_Login_success
 class Test_ClassParty_Login():
-
+    pytestmark = [pytest.mark.classparty]
     @pytest.mark.parametrize("cases",Class_Party_Login_error)
     def test_login_error_info(self,ClassParty_Login_fixture,cases):
         login_page,index_page = ClassParty_Login_fixture

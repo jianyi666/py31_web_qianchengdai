@@ -4,6 +4,7 @@
 #@微信      :411758135
 #@File     :class_party_course_page.py
 #@Sotfware :PyCharm
+import time
 from common.base_page import BasePage
 from locator.class_party.class_party_locators import ClassParty_Course
 class ClassPartyCoursePage(BasePage):
@@ -44,6 +45,7 @@ class ClassPartyCoursePage(BasePage):
         点击已提交按钮
         :return:
         """
+        time.sleep(1)
         self.wait_ele_presence(ClassParty_Course.Course_Submitted_Button,"Course页面，已提交按钮")
         self.click_ele(ClassParty_Course.Course_Submitted_Button,"Course页面，已提交按钮")
 
@@ -52,4 +54,5 @@ class ClassPartyCoursePage(BasePage):
         点击表头中作业
         :return:
         """
+        time.sleep(1)
         self.click_ele(ClassParty_Course.Course_Task,"Course页面，表头中作业项")

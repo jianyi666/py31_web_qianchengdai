@@ -4,6 +4,7 @@
 #@微信      :411758135
 #@File     :class_party_private_information_page.py
 #@Sotfware :PyCharm
+import time
 from common.base_page import BasePage
 from locator.class_party.class_party_locators import ClassParty_PrivateInformation
 
@@ -29,7 +30,7 @@ class ClassPartyPrivateInformationPage(BasePage):
         私信页面点击联系人
         :return:
         """
-        self.wait_ele_visibility(ClassParty_PrivateInformation.PrivateInformation_Contacts,"PrivateInformation页面,联系人")
+        self.wait_ele_presence(ClassParty_PrivateInformation.PrivateInformation_Contacts,"PrivateInformation页面,联系人")
         self.click_ele(ClassParty_PrivateInformation.PrivateInformation_Contacts,"PrivateInformation页面,联系人")
 
     def PrivateInformation_Click_Py31_Class(self):

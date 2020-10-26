@@ -73,6 +73,7 @@ class ClassPartyIndexPage(BasePage):
         Index页面，点击课程更多
         :return:
         """
+        time.sleep(1)
         self.click_ele(ClassParty_Index.Index_Class_More,"Index页面,点击课程更多")
 
     def Index_Click_Class_Quit(self):
@@ -88,6 +89,7 @@ class ClassPartyIndexPage(BasePage):
         Index页面，退课弹框输入密码
         :return:
         """
+        time.sleep(1)
         self.input_ele_sendkeys(ClassParty_Index.Index_Frame_Login_PassWord,value,"Index页面，退课弹框输入登录密码")
 
     def Index_Click_Class_Frame_Quit(self):
@@ -95,6 +97,7 @@ class ClassPartyIndexPage(BasePage):
         Index页面，点击退课弹框中退出
         :return:
         """
+        time.sleep(1)
         self.wait_ele_clickable(ClassParty_Index.Index_Class_Frame_Quit,"Index页面，点击退课弹框中的退出")
         self.click_ele(ClassParty_Index.Index_Class_Frame_Quit,"Index页面，点击退课弹框中的退出")
 

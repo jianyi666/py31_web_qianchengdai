@@ -8,7 +8,6 @@ class Test_ClassParty_PrivateInformation():
     def test_send_private_information(self,cases,ClassParty_PrivateInformation):
         privateinformatin_page = ClassParty_PrivateInformation
 
-        time.sleep(5)
         # 点击联系人
         privateinformatin_page.PrivateInformation_Click_Contacts()
         #选择py31

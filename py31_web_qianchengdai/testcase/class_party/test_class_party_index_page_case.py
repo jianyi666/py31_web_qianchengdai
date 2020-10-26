@@ -12,7 +12,7 @@ from data.class_party.class_party_index_data import ClassParty_Index_Error_Data,
     ClassParty_Index_Drop_Out_Success_Data
 
 class Test_ClassParty_IndexPageCase():
-
+    pytestmark = [pytest.mark.classparty]
     @pytest.mark.parametrize("cases",ClassParty_Index_Error_Data)
     def test_Join_course_error_tips(self,cases,ClassParty_Index_fixture):
         index_page = ClassParty_Index_fixture[0]

@@ -10,6 +10,13 @@ from pywinauto.keyboard import send_keys
 from locator.class_party.class_party_locators import ClassParty_HomeWork
 class ClassPartyHomeWorkPage(BasePage):
 
+    def HomeWork_Click_Back_Course(self):
+        """
+        点击返回Course页面
+        :return:
+        """
+        time.sleep(1)
+        self.click_ele(ClassParty_HomeWork.HomeWork_Back_Course,"HomeWork页面,返回Course页面")
     def HomeWork_Click_Updated_Submit(self):
         """
         点击选择文件后的，更新提交按钮
@@ -72,6 +79,7 @@ class ClassPartyHomeWorkPage(BasePage):
         获取作业上传成功，提示信息
         :return:
         """
+        time.sleep(1)
         self.wait_ele_visibility(ClassParty_HomeWork.HomeWork_System_Prompt_submit_success,"HomeWork页面,作业上传成功提示信息")
         return self.get_ele_text(ClassParty_HomeWork.HomeWork_System_Prompt_submit_success,"HomeWork页面,作业上传成功提示信息")
     def HomeWork_Click_Upload_Success_Know_Button(self):
@@ -79,6 +87,7 @@ class ClassPartyHomeWorkPage(BasePage):
         点击上传作业成功提示框，我知道了按钮
         :return:
         """
+        time.sleep(1)
         self.click_ele(ClassParty_HomeWork.HomeWork_System_Prompt_Know,"HomeWork页面，上传文件成功，我知道了按钮")
 
     def HomeWork_Click_Th_Task_Discuss(self):

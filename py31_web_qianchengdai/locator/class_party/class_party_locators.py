@@ -42,6 +42,7 @@ class ClassParty_Course():
 
 
 class ClassParty_HomeWork():
+    HomeWork_Back_Course = (By.XPATH,"//a[@id='return-course']//span")
     HomeWork_Leave_Message =(By.XPATH,"//div[@id='mess1']/span[@class='s1']")
     HomeWork_Input_Leave_Message =(By.XPATH,"//div[@class='work-message2 clearfix']/textarea")
     HomeWork_Kept_Levae_Message=(By.XPATH,"//div[@class='work-message2 clearfix']/a")
@@ -64,7 +65,7 @@ class ClassParty_HomeWork():
 
 class ClassParty_PrivateInformation():
     PrivateInformation_Icon=(By.XPATH,"//div[@class='privateLetter']/a")
-    PrivateInformation_Contacts=(By.XPATH,"//div[@id='chat']//a[text()='联系人']")
+    PrivateInformation_Contacts=(By.CSS_SELECTOR,"#chat a[class=classp]")
     PrivateInformation_Py31=(By.XPATH,"//h2[@title='python自动化第31期']")
     PrivateInformation_Choice_Contact=(By.XPATH,"//ul[@class='re-ul']/li/p[text()='柠檬班--丹丹']")
     PrivateInformation_Input_Text=(By.XPATH,"//div[@class='m-text']/textarea")

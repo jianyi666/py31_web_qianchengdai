@@ -2,7 +2,7 @@ import time
 import pytest
 from data.class_party.class_party_homework_data import ClassParty_HomeWork_Upload_Task_Data,ClassParty_HomeWork_Updata_Task_Data
 class Test_ClassParty_CoursePage():
-
+    pytestmark = [pytest.mark.classparty]
     # @pytest.mark.parametrize("cases",ClassParty_HomeWork_Upload_Task_Data)
     # def test_upload_task(self,cases,ClassParty_Course_fixture):
     #
