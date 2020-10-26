@@ -16,6 +16,7 @@ class ClassPartyCoursePage(BasePage):
         """
         self.wait_ele_presence(ClassParty_Course.Course_Back_Index,"Course页面，返回Index页面")
         self.click_ele(ClassParty_Course.Course_Back_Index,"Course页面，返回Index页面")
+
     def Course_Get_CourseCode(self):
         """
         获取课堂代码
@@ -35,6 +36,7 @@ class ClassPartyCoursePage(BasePage):
         点击上传作业按钮
         :return:
         """
+        self.wait_ele_presence(ClassParty_Course.Course_Upload_task,"Course页面，上传作业按钮")
         self.click_ele(ClassParty_Course.Course_Upload_task,"Course页面，上传作业按钮")
 
     def Course_Click_Subitted_Button(self):
@@ -42,6 +44,7 @@ class ClassPartyCoursePage(BasePage):
         点击已提交按钮
         :return:
         """
+        self.wait_ele_presence(ClassParty_Course.Course_Submitted_Button,"Course页面，已提交按钮")
         self.click_ele(ClassParty_Course.Course_Submitted_Button,"Course页面，已提交按钮")
 
     def Course_Click_th_Task(self):

@@ -5,11 +5,13 @@
 #@File     :conftest.py
 #@Sotfware :PyCharm
 import pytest
+import time
 from common.handle_config import config
 from selenium.webdriver import Chrome
 from pages.class_party.class_party_login_page import ClassPartyLoginPage
 from pages.class_party.class_party_index_page import ClassPartyIndexPage
 from pages.class_party.class_party_course_page import ClassPartyCoursePage
+from pages.class_party.class_party_homework_page import ClassPartyHomeWorkPage
 
 @pytest.fixture(scope='class')
 def ClassParty_Login_fixture():
@@ -51,13 +53,23 @@ def ClassParty_Course_fixture():
     driver.implicitly_wait(30)
     driver.get(config.get("class_party", "BASE_URL"))
     driver.maximize_window()
+    #Login页面，登陆
     login_page = ClassPartyLoginPage(driver)
     login_page.Login_Close_Frame()
     login_page.Login_Click_Login()
     login_page.Login_Input_Account(config.get("ClassParty_IndexPage", "Account"))
     login_page.Login_Input_PassWord(config.get("ClassParty_IndexPage", "Password"))
     login_page.Login_Click_Login_Button()
+    #Index页面，加入课程
     index_page = ClassPartyIndexPage(driver)
     index_page.Index_Click_Join_Class()
     index_page.Index_Input_Class_Code(config.get("ClassParty_CoursePage","CourseCode"))
     index_page.Index_Click_Frame_Join()
+    #Index页面，进入课程，切换到作业
+    index_page.Index_Click_Into_Class()
+    course_page=ClassPartyCoursePage(driver)
+    course_page.Course_Click_th_Task()
+    homework_page = ClassPartyHomeWorkPage(driver)
+    yield course_page,homework_page
+    time.sleep(3)
+    driver.quit()
