@@ -7,7 +7,10 @@
 import time
 import pytest
 from data.class_party.class_party_index_data import ClassParty_Index_Error_Data,\
-    ClassParty_Index_Success_Data,ClassParty_Index_Repeat_Join_Data,ClassParty_Index_Into_Course_Data
+    ClassParty_Index_Success_Data,ClassParty_Index_Repeat_Join_Data,\
+    ClassParty_Index_Into_Course_Data,ClassParty_Index_Drop_Out_Error_Data,\
+    ClassParty_Index_Drop_Out_Success_Data
+
 class Test_ClassParty_IndexPageCase():
 
     @pytest.mark.parametrize("cases",ClassParty_Index_Error_Data)
@@ -31,7 +34,6 @@ class Test_ClassParty_IndexPageCase():
         assert cases["Expect"] == index_page.Index_Get_Join_OR_Drop_Class_Toast_Text("加入课程")
 
     @pytest.mark.parametrize("cases", ClassParty_Index_Repeat_Join_Data)
-
     def test_Repeat_Join_Course(self,cases,ClassParty_Index_fixture):
         index_page = ClassParty_Index_fixture[0]
         # 点击加入课程
@@ -53,4 +55,35 @@ class Test_ClassParty_IndexPageCase():
         index_page.Index_Click_Into_Class()
         # 断言
         assert cases['Expect'] == course_page.Course_Get_CourseCode()
+        course_page.Course_Click_Back_Index()
+    @pytest.mark.parametrize("cases",ClassParty_Index_Drop_Out_Error_Data)
+    def test_Drop_Out_Error_Tips(self,cases,ClassParty_Index_fixture):
+        index_page = ClassParty_Index_fixture[0]
+        #点击课程中的更多
+        index_page.Index_Click_Class_More()
+        #点击退课
+        index_page.Index_Click_Class_Quit()
+        #输入密码
+        index_page.Index_Class_Frame_Input_PassWord(cases['PassWord'])
+        # 点击退课
+        index_page.Index_Click_Class_Frame_Quit()
+        #断言
+        assert cases['Expect'] == index_page.Index_Get_PassWord_Error_Toast_Text()
+        # 点击取消
+        index_page.Index_Click_Class_Frame_Cancel()
+    @pytest.mark.parametrize("cases",ClassParty_Index_Drop_Out_Success_Data)
+    def test_Drop_Out_Success(self,cases,ClassParty_Index_fixture):
+        index_page = ClassParty_Index_fixture[0]
+        # 点击课程中的更多
+        index_page.Index_Click_Class_More()
+        # 点击退课
+        index_page.Index_Click_Class_Quit()
+        # 输入密码
+        index_page.Index_Class_Frame_Input_PassWord(cases['PassWord'])
+        # 点击退课
+        index_page.Index_Click_Class_Frame_Quit()
+        # 断言
+        assert cases['Expect'] == index_page.Index_Get_Join_OR_Drop_Class_Toast_Text("退课")
+
+
 

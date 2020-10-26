@@ -33,6 +33,7 @@ class ClassParty_Index():
     Index_Toast_Join_And_Drop_Class_Success = (By.XPATH,"//div[@id='show-tip']/span")
 
 class ClassParty_Course():
+    Course_Back_Index =(By.XPATH,"//div[@class='nav nav-clear clearfix course-nav']//a[text()='课堂 ']")
     Course_Code=(By.XPATH,"(//div[@class='codetip'])[3]")
     Course_Task=(By.XPATH,"//div[@id='third-nav']/a[text()='作业']")
     Course_Upload_task=(By.XPATH,"//div[@class='announce-cont-box']//a[text()='上传作业']")

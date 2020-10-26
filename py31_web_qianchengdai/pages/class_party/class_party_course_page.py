@@ -9,6 +9,13 @@ from locator.class_party.class_party_locators import ClassParty_Course
 class ClassPartyCoursePage(BasePage):
 
 
+    def Course_Click_Back_Index(self):
+        """
+        返回Index页面
+        :return:
+        """
+        self.wait_ele_presence(ClassParty_Course.Course_Back_Index,"Course页面，返回Index页面")
+        self.click_ele(ClassParty_Course.Course_Back_Index,"Course页面，返回Index页面")
     def Course_Get_CourseCode(self):
         """
         获取课堂代码

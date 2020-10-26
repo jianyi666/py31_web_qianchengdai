@@ -28,3 +28,13 @@ ClassParty_Index_Repeat_Join_Data=[
 ClassParty_Index_Into_Course_Data=[
     {"title": "进入课程", "Expect": "P69UVV"},
 ]
+
+ClassParty_Index_Drop_Out_Error_Data=[
+    {"title": "退课密码输入1位", "PassWord":"1","Expect": "密码错误"},
+    {"title": "退课密码输入空格", "PassWord":"  ","Expect": "密码错误"},
+    {"title": "退课密码输入错误密码", "PassWord":"1234567","Expect": "密码错误"},
+]
+
+ClassParty_Index_Drop_Out_Success_Data=[
+    {"title": "退课密码输入1位", "PassWord":"123456a","Expect": "课程退课成功"},
+]

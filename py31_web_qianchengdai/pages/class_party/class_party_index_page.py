@@ -57,7 +57,7 @@ class ClassPartyIndexPage(BasePage):
         Index页面加入课堂弹框，点击取消
         :return:
         """
-        self.wait_ele_presence(ClassParty_Index.Index_Frame_Cancel,"Index页面加入课堂弹框，点击取消")
+        self.wait_ele_visibility(ClassParty_Index.Index_Frame_Cancel,"Index页面加入课堂弹框，点击取消")
         self.click_ele(ClassParty_Index.Index_Frame_Cancel,"Index页面加入课堂弹框，点击取消")
 
     def Index_Click_Into_Class(self):
@@ -80,6 +80,7 @@ class ClassPartyIndexPage(BasePage):
         Index页面，点击课程更多后，退课
         :return:
         """
+        self.wait_ele_visibility(ClassParty_Index.Index_Class_Quit,"Index页面，点击更多中的退课")
         self.click_ele(ClassParty_Index.Index_Class_Quit,"Index页面，点击更多中的退课")
 
     def Index_Class_Frame_Input_PassWord(self,value):
@@ -94,6 +95,7 @@ class ClassPartyIndexPage(BasePage):
         Index页面，点击退课弹框中退出
         :return:
         """
+        self.wait_ele_clickable(ClassParty_Index.Index_Class_Frame_Quit,"Index页面，点击退课弹框中的退出")
         self.click_ele(ClassParty_Index.Index_Class_Frame_Quit,"Index页面，点击退课弹框中的退出")
 
     def Index_Click_Class_Frame_Cancel(self):
@@ -101,6 +103,7 @@ class ClassPartyIndexPage(BasePage):
          Index页面，点击退课弹框中的取消
         :return:
         """
+        self.wait_ele_clickable(ClassParty_Index.Index_Class_Frame_Cancel, "Index页面，点击退课弹框中的取消")
         self.click_ele(ClassParty_Index.Index_Class_Frame_Cancel, "Index页面，点击退课弹框中的取消")
 
     def Index_Get_PassWord_Error_Toast_Text(self):
