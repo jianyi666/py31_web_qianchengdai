@@ -12,7 +12,7 @@ from pages.class_party.class_party_login_page import ClassPartyLoginPage
 from pages.class_party.class_party_index_page import ClassPartyIndexPage
 from pages.class_party.class_party_course_page import ClassPartyCoursePage
 from pages.class_party.class_party_homework_page import ClassPartyHomeWorkPage
-
+from pages.class_party.class_party_private_information_page import ClassPartyPrivateInformationPage
 @pytest.fixture(scope='class')
 def ClassParty_Login_fixture():
     driver = Chrome()
@@ -71,5 +71,24 @@ def ClassParty_Course_fixture():
     course_page.Course_Click_th_Task()
     homework_page = ClassPartyHomeWorkPage(driver)
     yield course_page,homework_page
-    time.sleep(3)
     driver.quit()
+
+@pytest.fixture(scope='class')
+def ClassParty_PrivateInformation():
+    driver = Chrome()
+    driver.implicitly_wait(30)
+    driver.get(config.get("class_party", "BASE_URL"))
+    driver.maximize_window()
+    # Login页面，登陆
+    login_page = ClassPartyLoginPage(driver)
+    login_page.Login_Close_Frame()
+    login_page.Login_Click_Login()
+    login_page.Login_Input_Account(config.get("ClassParty_IndexPage", "Account"))
+    login_page.Login_Input_PassWord(config.get("ClassParty_IndexPage", "Password"))
+    login_page.Login_Click_Login_Button()
+    # 进入私信页面
+    privateinformation_page =ClassPartyPrivateInformationPage(driver)
+    privateinformation_page.PrivateInformation_Click_Icon()
+    yield privateinformation_page
+    driver.quit()
+
