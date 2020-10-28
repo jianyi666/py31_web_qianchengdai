@@ -3,6 +3,7 @@ import  logging
 import os
 from logging.handlers import TimedRotatingFileHandler
 from common.handle_path import FUTURE_LOAN_LOGS_DIR
+
 def crate_logs():
     # 创建日志收集器
     log = logging.getLogger("jianyi")
