@@ -55,7 +55,7 @@ class ClassPartyPrivateInformationPage(BasePage):
         :param value:
         :return:
         """
-        self.wait_ele_visibility(ClassParty_PrivateInformation.PrivateInformation_Input_Text,value,"PrivateInformation页面,输入聊天内容")
+        time.sleep(1)
         self.input_ele_sendkeys(ClassParty_PrivateInformation.PrivateInformation_Input_Text,value,"PrivateInformation页面,输入聊天内容")
 
     def PrivateInformation_Click_Send_Out(self):
