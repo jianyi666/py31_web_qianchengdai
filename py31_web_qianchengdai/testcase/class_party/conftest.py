@@ -99,9 +99,12 @@ def ClassParty_PrivateInformation():
     login_page.Login_Input_Account(config.get("ClassParty_IndexPage", "Account"))
     login_page.Login_Input_PassWord(config.get("ClassParty_IndexPage", "Password"))
     login_page.Login_Click_Login_Button()
+
     # 进入私信页面
-    privateinformation_page =ClassPartyPrivateInformationPage(driver)
+    privateinformation_page = ClassPartyPrivateInformationPage(driver)
     privateinformation_page.PrivateInformation_Click_Icon()
+    w_handles = driver.window_handles
+    driver.switch_to.window(w_handles[-1])
     yield privateinformation_page
     driver.quit()
 

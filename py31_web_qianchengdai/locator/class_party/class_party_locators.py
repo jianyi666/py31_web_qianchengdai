@@ -64,6 +64,7 @@ class ClassParty_HomeWork():
 
 
 class ClassParty_PrivateInformation():
+
     PrivateInformation_Icon=(By.XPATH,"//div[@class='privateLetter']/a")
     PrivateInformation_Contacts=(By.CSS_SELECTOR,"#chat a[class=classp]")
     PrivateInformation_Py31=(By.XPATH,"//h2[@title='python自动化第31期']")
